@@ -1,6 +1,8 @@
+import java.util.Scanner;
 class Factorial{
     public static void main(String args[]){
-        int n = 5;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();;
         System.out.print(fact(n));
     }
     public static int fact(int n){
@@ -10,5 +12,5 @@ class Factorial{
         else{
             return n * fact(n-1);
         }
-    }
+    }    
 }
