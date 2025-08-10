@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 class SecSmallest{
     public static void main(String args[]){
-        int a[] = {45, 34, 12, 4, 5};
-        small_2(a, 5);
+        int a[] = {1, 8, 5, 4, 3, 2};
+        small_2(a, 6);
     }
 
     public static void small(int arr[], int n){
@@ -20,8 +20,8 @@ class SecSmallest{
     }
 
     public static void small_2(int arr[], int n){
-        int smal = arr[0];
-        int secsmal = -1;
+        int smal = Integer.MAX_VALUE;
+        int secsmal = Integer.MAX_VALUE;
         for(int i = 0; i < n; i++){
             if(arr[i] < smal){
                 secsmal = smal;

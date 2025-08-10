@@ -2,7 +2,7 @@ import java.util.HashSet;
 class RemoveDublicates{
     public static void main(String args[]){
         int a[] = {2, 2, 4, 5, 5, 9, 9};
-        remove_2(a, 7);
+        remove(a, 7);
     }
 
     // TC --> O(nlogn + n)
@@ -11,6 +11,7 @@ class RemoveDublicates{
         for(int i = 0; i < n; i++){
             s1.add(arr[i]);
         }
+        System.out.println(s1);
         int k = s1.size();
         int j = 0;
         for(int x :s1){

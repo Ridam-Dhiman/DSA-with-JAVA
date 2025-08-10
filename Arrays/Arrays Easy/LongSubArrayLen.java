@@ -48,7 +48,7 @@ class LongSubArrayLen{
         int left = 0;
         int right = 0;
         int sum = a[0];
-        int maxi = 0;
+        int maxi = 0 ;
         while(right < n){
             while(left <= right && sum > k){
                 sum -= a[left];

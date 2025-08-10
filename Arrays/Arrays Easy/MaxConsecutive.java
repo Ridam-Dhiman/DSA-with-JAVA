@@ -8,12 +8,13 @@ class MaxConsecutive{
         int len = 0;
         for(int i = 0; i < a.length; i++){
             if(a[i] == 0){
+                len = Math.max(len, cnt);
                 cnt = 0;
             }
             else if(a[i] == 1){
                 cnt += 1;
             }
-            len = Math.max(len, cnt);
+            // len = Math.max(len, cnt);
         }
         System.out.println(len);
     }

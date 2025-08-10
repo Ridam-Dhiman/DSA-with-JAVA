@@ -2,7 +2,7 @@ class MissingNum{
     public static void main(String args[]){
         int a[] = {1, 2, 3, 5, 6};
         // return 4
-        // find1(a, 6);
+        find1(a, 6);
         System.out.println();
         find4(a, 6);
     }

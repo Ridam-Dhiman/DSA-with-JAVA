@@ -1,17 +1,36 @@
+import java.util.LinkedHashSet;
 import java.util.HashSet;
+import java.util.HashMap;
 import java.util.ArrayList;
 
 class UnionSorted{
     public static void main(String args[]){
-        int a[] = {1, 1, 3, 3, 5, 6};
-        int b[] = {3, 4, 5, 6, 7, 8, 9};
-        Union1(a, b);
-        Union2(a, b);
-
+        int a[] = {1, 4, 5, 8};
+        int b[] = {3, 6, 2, 0};
+        Union(a, b);
+        // Union2(a, b);
     }
 
+    public static void Union(int a[], int b[]){
+        HashMap<Integer, Integer> h = new HashMap<>();
+        for(int i = 0; i < a.length; i++){
+            h.put(a[i], h.getOrDefault(a[i], 0)+1);
+        }
+        for(int i = 0 ; i < b.length; i++){
+            h.put(b[i], h.getOrDefault(b[i], 0)+1);
+        }
+        int arr[] = new int[h.size()];
+        int i = 0;
+        for(int x : h.keySet()){
+            arr[i] = x;
+            i++;
+        }
+        print_arr(arr, arr.length);
+    }
     public static void Union1(int a[], int b[]){
         HashSet<Integer> h = new HashSet<>();
+        // Using LinkedHashSet to maintain insertion order
+        // LinkedHashSet<Integer> h = new LinkedHashSet<>();
         int n1 = a.length;
         int n2 = b.length;
         for(int i = 0; i < n1; i++){
